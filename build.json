@@ -1,0 +1,25 @@
+{
+	"files": {
+		"dist/adventure": {
+			"src": [
+				"src/adventure.js"
+			],
+			"prehint": true,
+			"posthint": false,
+			"debug": true,
+
+			"meta": {
+				"label": "Adventure",
+				"author": "Rick Waldron, Mike Pennisi",
+				"version": "0.0.0",
+				"homeurl": "",
+				"license": [ "MIT" ],
+				"copyright": "Copyright (c) 2011 Rick Waldron, Mike Pennisi"
+			}
+		}
+	},
+	"jshint": {
+		"predef": [ "jQuery", "$", "Adventure" ]
+	}
+
+}

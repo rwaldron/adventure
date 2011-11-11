@@ -1,0 +1,23 @@
+{
+	"author": "Rick Waldron",
+	"name": "Adventure",
+	"description": "Adventure (Popcorn, jQuery)",
+	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:rwldrn/adventure.git"
+	},
+	"engines": {
+		"node": ">=v0.4.8"
+	},
+	"devDependencies": {
+		"underscore": "*",
+		"jshint": "*",
+		"uglify-js": "*",
+		"express": "*",
+		"vows": "*",
+		"colors": "*",
+		"flate": "*",
+		"dateformat": "*"
+	}
+}

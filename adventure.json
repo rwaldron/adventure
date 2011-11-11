@@ -1,0 +1,24 @@
+[
+  {
+    "subtitle":  {
+      "start": 6,
+      "end": 7,
+      "text": "<a href='#' data-choice='a'>Go with Mike</a> or <a href='#' data-choice='b'>Stay and Work</a>"
+    }
+  },
+  {
+    "subtitle":  {
+      "start": 21.9,
+      "end": 23,
+      "text": "Fin."
+    }
+  },
+  {
+    "subtitle":  {
+      "start": 10,
+      "end": 15,
+      "text": "BOOYAH"
+    }
+  }
+
+]

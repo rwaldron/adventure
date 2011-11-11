@@ -196,7 +196,8 @@
 					var $scope = $( selector );
 
 					_.forEach( delegate, function( callback, eventAndSelector ) {
-            // Parse "natural language" event and selector key
+						// TODO: Parse "natural language" event and selector key
+						// For now: cheat.
 						var parts = eventAndSelector.split(" on ");
 
 						parts.push( self, callback );

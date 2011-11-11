@@ -305,12 +305,7 @@ $(function() {
 					// Squash default behaviour
 					event.preventDefault();
 
-					// Reference the clicked element
-					var $this = $(this);
-
-					event.data.outcomes[ $this.data("choice") ].call( event.data.pop );
-
-					//console.log( $this.data("choice"), event.data.outcomes );
+					event.data.outcomes[ $(this).data("choice") ].call( event.data.pop );
 				}
 			}
 		}

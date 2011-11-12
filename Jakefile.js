@@ -221,7 +221,7 @@ function gzip( src ) {
 // Jake Tasks
 
 desc( "Hint & Minify" );
-task( "default", [ "hint", "min" ], function() {
+task( "default", [ "hint", "min", "preso" ], function() {
 	// Nothing
 });
 
@@ -303,6 +303,19 @@ task( "min", function() {
 		}
 	});
 });
+
+desc( "Presentable" );
+task( "preso", function() {
+
+	header( "Replacing tabs with spaces to make source presentation friendly" );
+
+	_.forEach( config.files, function( data, file ) {
+		var source = readFile( file + ".js" );
+
+		writeFile( file + ".present.js", source.replace( /\t/g, "  " ), false );
+	})
+});
+
 
 // JSONLINT IS FUCKING BUSTED.
 // desc( "JSONLint" );

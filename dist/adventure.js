@@ -12,7 +12,7 @@
 		tracks: null,
 
 		// Outcome keys and callbacks
-		outcomes: null,
+		scenarios: null,
 
 		// Program Initializer
 		// Delegates all setup tasks.
@@ -39,8 +39,8 @@
 			// specified media element's ID to Popcorn()
 			self.pop = Popcorn( options.mediaId );
 
-			// Localize the options.outcomes data property
-			self.outcomes = options.outcomes;
+			// Localize the options.scenarios data property
+			self.scenarios = options.scenarios;
 
 			// Listen for the custom "canplayall" event hook
 			// to be triggered. Similar to "canplaythrough",
@@ -196,7 +196,8 @@
 					var $scope = $( selector );
 
 					_.forEach( delegate, function( callback, eventAndSelector ) {
-            // Parse "natural language" event and selector key
+						// TODO: Parse "natural language" event and selector key
+						// For now: cheat.
 						var parts = eventAndSelector.split(" on ");
 
 						parts.push( self, callback );
@@ -217,7 +218,7 @@
 								// Reference the clicked element
 								var $this = $(this);
 
-								console.log( $this.data("choice"), event.data.outcomes );
+								console.log( $this.data("choice"), event.data.scenarios );
 							}
 						]
 						*/
@@ -285,7 +286,7 @@ $(function() {
 			}
 		},
 
-		outcomes: {
+		scenarios: {
 			// |this| refers to the Popcorn instance object
 
 			// a: jump to light-saber battle scene
@@ -304,12 +305,7 @@ $(function() {
 					// Squash default behaviour
 					event.preventDefault();
 
-					// Reference the clicked element
-					var $this = $(this);
-
-					event.data.outcomes[ $this.data("choice") ].call( event.data.pop );
-
-					//console.log( $this.data("choice"), event.data.outcomes );
+					event.data.scenarios[ $(this).data("choice") ].call( event.data.pop );
 				}
 			}
 		}

@@ -316,6 +316,15 @@ task( "preso", function() {
 	})
 });
 
+desc( "Commit Build" );
+task( "commit", function() {
+
+	header( "Commit built program" );
+
+	exec( "git add dist/. && git commit -m 'Commit built program (" + (+new Date()) + ")' ", function() {
+		ok( "Built program files have been committed" );
+	});
+});
 
 // JSONLINT IS FUCKING BUSTED.
 // desc( "JSONLint" );

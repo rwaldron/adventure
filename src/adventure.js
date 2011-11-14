@@ -255,7 +255,7 @@ $(function() {
 	Adventure({
 
 		// ID Selector for media element
-		mediaId: "#adventure",
+		mediaId: "#adventure-media",
 
 		// Track Event source
 		events: "adventure.json",
